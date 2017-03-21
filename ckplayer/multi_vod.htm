@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>vod rtmp player</title>
+
+</head>
+
+<body>
+
+<table>
+<tr>
+
+<td>
+<p>vod stream1</p>
+<div id="a1"></div>
+<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var flashvars={
+			f:'rtmp://112.74.51.80:1935/vod/cartoon.mp4',
+			c:0,
+			b:1
+			};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);  
+</script>
+</td>
+
+<td>
+<p>vod stream2</p>
+<div id="a2"></div>
+<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+	var flashvars={
+			f:'http://112.74.51.80/vod_player/ngx_cloud_sudo.flv',
+			c:0,
+			b:1
+			};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('ckplayer/ckplayer.swf','a2','ckplayer_a2','600','400',flashvars,params);  
+</script>
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>vod rtmp player</title>
+
+</head>
+
+<body>
+<div id="a1"></div>
+
+<script type="text/javascript" src="ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+	VideoPlay("rtmp://112.74.51.80:1935/vod/cartoon.mp4", 600, 400);
+	function VideoPlay(F, A, E){ // F:url A:width E:height
+        var B = F;
+        var G = { f: B, c: 0, b: 1, p: 2 };
+        var D = { bgcolor: "#000", allowFullScreen: true, allowScriptAccess: "always" };
+        var C = ["" + B + "->video/mp4", "" + B + "->video/webm", "" + B + "->video/ogg"];
+        var H = ["all"];
+        CKobject.embed("ckplayer/ckplayer.swf", "a1", "ckplayer_a1", A, E, true, G, C, H)
+    }
+	
+	var flashvars={
+			f:'rtmp://112.74.51.80:1935/vod/cartoon.mp4',
+			c:0,
+			b:1
+			};
+	var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+	CKobject.embedSWF('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);  
+</script>
+</body>
+</html>
